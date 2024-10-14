@@ -10,14 +10,16 @@ body {
 h1{
   color :white;
   font-weight: bolder;
+  font-size: xx-large;
 }
 
 p{
   color: white;
-  font-weight: bolder;
+  font-size:larger;
+  font-weight:bold;  
 }
   
-.content {
+.hero {
   position: absolute; /* Positioning relative to the viewport */
   top: 50%; /* Move down 50% */
   right: 20px; /* Space from the right */
