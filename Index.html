@@ -3,60 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Your page description here">
-    <title>SK MENSAH- HOME PAGE</title>
-    <link rel="stylesheet" href="main.css"> <!-- Link to your CSS file -->
+    <title>SK MENSAH</title>
+    <link rel="stylesheet" href="bg image.css"> <!-- Link to your CSS file -->
+   
 </head>
 <body>
-    <header>
-        <h1>SK MENSAH</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section id="home">
-            <h2>Welcome to Our Website</h2>
-            <p>Your introductory text goes here.</p>
-        </section>
 
-        <section id="about">
-            <h2>About Us</h2>
-            <p>Information about your company or project.</p>
-        </section>
+<div class="content">
+    <h1>Hi, I'm S.K Mensah</h1>
+    <p>I'm a ...</p>
+    <div class="typing" id="typing"></div>
+</div>
 
-        <section id="services">
-            <h2>Our Services</h2>
-            <p>Details about the services you offer.</p>
-        </section>
 
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <form action="#" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
+<script>
+    const texts = [
+        "IT Specialist!",
+        "Web Designer!",
+        "Web Developer!",
+        "Business Analyst"
+    ];
+    let currentIndex = 0;
+    let currentText = '';
+    let charIndex = 0;
 
-                <button type="submit">Send</button>
-            </form>
-        </section>
-    </main>
+    function type() {
+        if (charIndex < texts[currentIndex].length) {
+            currentText += texts[currentIndex].charAt(charIndex);
+            document.getElementById('typing').textContent = currentText;
+            charIndex++;
+            setTimeout(type, 100); // Adjust typing speed here
+        } else {
+            setTimeout(erase, 2000); // Pause before erasing
+        }
+    }
 
-    <footer>
-        <p>&copy; 2024 S.K Mensah</p>
-        <p>All rights reserved</p>
-        
-    </footer>
+    function erase() {
+        if (charIndex > 0) {
+            currentText = currentText.slice(0, charIndex - 1);
+            document.getElementById('typing').textContent = currentText;
+            charIndex--;
+            setTimeout(erase, 50); // Adjust erasing speed here
+        } else {
+            currentIndex = (currentIndex + 1) % texts.length; // Cycle through texts
+            charIndex = 0;
+            setTimeout(type, 500); // Pause before typing the next text
+        }
+    }
+
+    // Start typing effect
+    type();
+</script>
+
 </body>
 </html>
