@@ -8,11 +8,29 @@
    
 </head>
 <body>
+<header>
+    <div class="topnav" id="myTopnav">
 
+        <div class="logo">
+            <img src="https://placehold.it/100x39" alt="Logo" />
+        </div>
+        <a class="active" href="#home">HOME</a>
+        <a href="#">ABOUT</a>
+        <a href="#contact">CONTACT</a>
+        <a href="#about">PORTFOLIO</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+      </div>
+
+</header>
 
 <section class="hero">
     <P>Hi, I'm</P>
-    <h1>Samuel Mensah</h1>
+    <h1>SAMUEL MENSAH</h1>
+    <h2>Aspiring</h2>
+    
     <div class="typing" id="typing" style="font-weight: bolder;"></div>
 </section>
 
@@ -25,9 +43,11 @@
 <!--Typing text JS-->
 <script>
     const texts = [
-        "BUSINESS ANALYST",     
+        "BUSINESS ANALYST",  
+        "UI/UX DESIGNER",  
         "WEB DESIGNER",
         "WEB DEVELOPER",
+        "SOFTWARE DEVELOPER",
         "IT SPECIALIST"
     ];
     let currentIndex = 0;
