@@ -48,6 +48,7 @@
         "WEB DESIGNER",
         "WEB DEVELOPER",
         "SOFTWARE DEVELOPER",
+        "IT TECHNICIAN",
         "IT SPECIALIST"
     ];
     let currentIndex = 0;
@@ -70,7 +71,7 @@
             currentText = currentText.slice(0, charIndex - 1);
             document.getElementById('typing').textContent = currentText;
             charIndex--;
-            setTimeout(erase, 50); // Adjust erasing speed here
+            setTimeout(erase, 10); // Adjust erasing speed here
         } else {
             currentIndex = (currentIndex + 1) % texts.length; // Cycle through texts
             charIndex = 0;
@@ -81,6 +82,7 @@
     // Start typing effect
     type();
 </script>
+<!-- end of Typing text JS-->
 
 </body>
 </html>
