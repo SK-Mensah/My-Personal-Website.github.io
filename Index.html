@@ -5,21 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SK MENSAH</title>
     <link rel="stylesheet" href="main.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Link to Font Awesome -->
    
 </head>
 <body>
 
 
-<section class="hero">
-    <P>Hi, I'm</P>
-    <h1>SAMUEL MENSAH</h1>
-    <h2>Aspiring</h2>
+<div class="hero-section">
+    <section class="hero">
+        <p>Hi, I'm</p>
+        <h1>SAMUEL MENSAH</h1>
+        <h2>Aspiring</h2>
+        <div class="typing" id="typing"></div>
+    </section>
     
-    <div class="typing" id="typing" style="font-weight: bolder;"></div>
+
+    
+    <div class="scroll-down" onclick="scrollToAbout()">
+        <i class="fas fa-chevron-down fa-2x"></i>
+    </div>
+</div>
+
+<style>
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+</style>
 
 
+
+<section id="about-me" class="about">
+    <h2>About Me</h2>
+    <p>I am a passionate and versatile technology professional with expertise across multiple domains in IT and software development. My journey in tech has equipped me with a unique blend of technical and analytical skills.</p>
     
+    <p>Currently pursuing opportunities where I can leverage my diverse skill set to create innovative solutions and drive technological advancement.</p>
+
+    <div class="skills">
+        <h3>Core Skills:</h3>
+        <ul>
+            <li>Business Analysis & Process Optimization</li>
+            <li>Full Stack Web Development</li>
+            <li>UI/UX Design</li>
+            <li>Software Development</li>
+            <li>IT Infrastructure & Support</li>
+            <li>Project Management</li>
+        </ul>
+    </div>
 </section>
+
+
+
+
 
 
 
@@ -71,6 +115,15 @@
     type();
 </script>
 <!-- end of Typing text JS-->
+
+<!-- Add this script before the closing body tag -->
+<script>
+function scrollToAbout() {
+    document.getElementById('about-me').scrollIntoView({ 
+        behavior: 'smooth' 
+    });
+}
+</script>
 
 
 
